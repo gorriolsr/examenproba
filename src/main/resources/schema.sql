@@ -13,3 +13,13 @@ CREATE TABLE USERS
     captures     INT                   DEFAULT 0,
     eliminations INT                   DEFAULT 0
 );
+
+DROP TABLE IF EXISTS KINGDOMS;
+
+CREATE TABLE KINGDOMS(
+    id         VARCHAR(36) PRIMARY KEY,
+    gold       INT NOT NULL,
+    citizens   INT NOT NULL,
+    food       INT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP()
+);
